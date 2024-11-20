@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+        <IsPackable>false</IsPackable>
+        <RootNamespace>WebAuthn.Net</RootNamespace>
+        <NoWarn>$(NoWarn),CA1034,CA1812</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="Services/**/*.json" />
+        <EmbeddedResource Include="Services/**/*.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="DSL/Fakes/FakeResources/**/*.*" />
+        <EmbeddedResource Include="DSL/Fakes/FakeResources/**/*.*" />
+    </ItemGroup>
+
+</Project>
